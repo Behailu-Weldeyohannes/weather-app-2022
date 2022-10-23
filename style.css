@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400&family=Roboto:wght@300;400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* background: #434750; */
+  background-image: url("./images/temp-bg.png");
+  overflow: hidden;
+}
+h1 {
+  font-size: 100px;
+  font-family: "Lato";
+  color: indianred;
+}
