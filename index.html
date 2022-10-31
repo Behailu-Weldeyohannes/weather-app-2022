@@ -5,11 +5,29 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="stylesheet" href="style.css">
-    <title>Vite App</title>
+    <title>Weather Lookup</title>
   </head>
   <body>
-    <h1>Weather Lookup Starter</h1>
+  <!-- Navbar Part -->
+    <div class="m-container">
+      <nav-element> </nav-element>
+    </div>
+
+    <section class="header-title">
+  <div class="container-box">
+    <h1 class="heading">Weather Lookup</h1>
+    <form>
+      <input type="text" placeholder="City Name" autofocus>
+      <button type="submit">SEARCH</button>
+      <span class="t-message"></span>
+    </form>
+  </div>
+</section>
+
+
+
     <div id="app"></div>
     <script type="module" src="/main.js"></script>
+    <script src="nav.js"></script>
   </body>
 </html>
