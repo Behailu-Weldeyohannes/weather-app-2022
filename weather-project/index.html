@@ -1,103 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-    />
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="weather finder">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link
-      href="https://fonts.googleapis.com/css2?family=Material+Icons"
       rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
-      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
     />
     <link rel="stylesheet" href="style.css">
-    <title>Vite App</title>
-  </head>
-  <body>
-<header class="header-container">
-     
-<h3 class="main-logo">
- <i class="fas fa-tree"></i> WEATHER-FINDER
-          </a>
+    <title>Weather Finder</title>
+</head>
+<body>
+    <nav>
+<div class="logo">
+    <h4><i class="fas fa-bolt"></i> Weather Finder</h4>
+</div>
+<ul class="menu-items">
+        <li>
+          <a href="#"><i class="fas fa-home"></i> Home</a>
         </li>
-</h1>
-<!-- ======================================== 
-        Navigation Section  
-    ========================================  -->
+        <li>
+          <a href="#form"> <i class="fas fa-search"></i> Search</a>
+        </li>
+        <!-- <li>
+          <a href="#"><i class="fas fa-question-circle"></i> Contact</a>
+        </li> -->
+      </ul>
 
-      <nav class="navbar" id="navbar">
-        <ul class="navbar-list">
-          <li><a class="nav-link" href="#navbar"><i class="fas fa-home"></i> Home</a></li>
-          <li><a class="nav-link" href="#"><i class="fas fa-search"></i>  Search</a></li>
-          <li><a class="nav-link" href="#"><i class="fas fa-question-circle"></i>  Support</a></li>
-          </li>
-        </ul>
-      </nav>
-
-      <div class="mobile-navbar-btn">
-        <ion-icon name="menu-outline" class="mobile-nav-icon"><i class="fas fa-bars"></i></ion-icon>
-        <ion-icon name="close-outline" class="mobile-nav-icon"><i class="fas fa-times"></i></ion-icon>
+      <div class="bar-mobile">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
       </div>
-    </header>
+    </nav>
 
-    <!-- ======================================== 
-        Home Section  
-    ========================================  -->
-    <main>
       <section class="section-hero">
         <div class="hero">
-         <div class="container-screen">
-          <h3>Providing you with the most accurate and comprehensive weather 
-            forecast for your location or city.
-          </h3>
+         <div class="home-content">
+     <h1>
+          Never Stop  <br />
+          Checking the Weather.
+        </h1>
+        <p>
+          We help you to stay on top of rapid weather change  so that it doesn’t disrupt your plans. 
+        </p>
+        <a href="#form" class="btn" id="btn">Check the Weather</a>
+        <br>
+        
+
+        <div class="border"></div>
         <video controls muted autoplay loop class="video-container">
-        <source src="./assets/Sky-bg.mp4" type="video/mp4" />
+        <!-- <source src="./assets/World.mp4" type="video/mp4" /> -->
+        <source src="./assets/bg-video.mp4" type="video/mp4" />
       </video>
         </div>
+        <div class="overlay"></div>
       </section>
-    </main>
+    
+      
+      <div class="section-separater"></div>
+      <div id="banner"></div>
+       <div id="clock"></div>
+      <!-- Search Section-->
+ <main class="wrapper-container">
 
-    <!-- ======================================== 
-          Search Section
-    ========================================  -->
-    <section class="search-section">
-      <div class="search">
-        <p>Search section</p>
+     <header class="search-box">
+      <div id="form" class="search">
+        <input
+          type="text"
+          id="searching"
+          class="search-bar"
+          placeholder="City Name"
+        />
+        <button>Search</button>
       </div>
-    </section>
-    <!-- ======================================== 
-          Support Section
-    ========================================  -->
-    <section class="support-section">
-      <div class="support">
-        <p>Support section</p>
+    </header>
+      
+     <section class="section-search">
+      
+     
+
+    <div class="location">
+        <h1 class="location-container" id="location-container"></h1>
       </div>
-    </section>
 
+     
 
+        <!--date-->
+  <div class="date-year">
+  
+  <div class="date"></div>
+</div>
+   
+
+ <div class="temp-main">
+        <div class="icon-container">
+          <img src="" class="icon-container" alt="" />
+        </div>
+        <div class="content-container">
+          <div class="head-temp"></div>
+          <div class="head-description" id="head-description">
+            
+          </div>
+        </div>
+  </div>
+  <!-- current stat -->
+      <div class="current-temp">
+        <div>
+          <div class="temp-value high-temp"></div>
+          <div class="label" id="label-high"></div>
+          <div class="temp-value min-temp"></div>
+          <div class="label" id="label-low"></div>
+        </div>
+        <div>
+          <div class="temp-value wind"></div>
+          <div class="label" id="wind"></div>
+        </div>
+        <div>
+          <div class="temp-value humidity"></div>
+          <div class="label" id="humidity"></div>
+          <div class="temp-value feels"></div>
+          <div class="label" id="feels"></div>
+        </div>
+      </div>
+
+     </section>
+     </main>
+
+      <!-- Contact Section-->
+      <!-- <div class="section-separater"></div>
+     <section class="section-contact">
+
+<h3>hi</h3>
+     </section> -->
     <!-- Footer -->
+<div class="section-separater"></div>
+    
     <footer class="footer">
 <h1 class="main-logo">
- <i class="fas fa-tree"></i> WEATHER-FINDER
+<i class="fas fa-bolt"></i> WEATHER FINDER
           </a>
         </li>
 </h1>
-    </li>
-  </ul>
-  
+
+<ul class="social-icons">
+        <li>
+          <a href="#">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <i class="fab fa-facebook"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </li>
+      </ul>
+
   <div class="legal">
     <p>&copy; 2022 Weather-Finder. All rights reserved.</p>
-    
-    
-  </div>
+</div>
 </footer>
+    
      
 
 
