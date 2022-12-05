@@ -162,3 +162,5 @@ document
       getWeather.search();
     }
   });
+
+getWeather.fetchWeather("Washington DC");
