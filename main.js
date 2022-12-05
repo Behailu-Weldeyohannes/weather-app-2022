@@ -163,4 +163,4 @@ document
     }
   });
 
-getWeather.fetchWeather("Washington DC");
+getWeather.fetchWeather("New York");
